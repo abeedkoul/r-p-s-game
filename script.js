@@ -11,7 +11,7 @@ function getComputerChoice() {
         choice = "paper";
     }
     if (x > 0.6 && x <= 1) {
-        choice = "scissors";
+        choice = "scissor";
     }
     return choice;
 }
@@ -48,19 +48,19 @@ function playGame() {
         else if (humanChoice.toLowerCase() == "rock" && computerChoice.toLowerCase() == "rock") {
             console.log("Tie Game No One Wins!");
         }
-        else if (humanChoice.toLowerCase() == "rock" && computerChoice.toLowerCase() == "scissors") {
+        else if (humanChoice.toLowerCase() == "rock" && computerChoice.toLowerCase() == "scissor") {
             console.log("Congratulations! You Won!!");
             ++humanScore;
         }
-        if (humanChoice.toLowerCase() == "scissors" && computerChoice.toLowerCase() == "paper") {
+        if (humanChoice.toLowerCase() == "scissor" && computerChoice.toLowerCase() == "paper") {
+            console.log("Congratulations! You Won!!");
+            ++humanScore;
+        }
+        else if (humanChoice.toLowerCase() == "scissor" && computerChoice.toLowerCase() == "rock") {
             console.log("You Lose! Better Luck Next Time");
             ++computerScore;
         }
-        else if (humanChoice.toLowerCase() == "scissors" && computerChoice.toLowerCase() == "rock") {
-            console.log("Congratulations! You Won!!");
-            ++humanScore;
-        }
-        else if (humanChoice.toLowerCase() == "scissors" && computerChoice.toLowerCase() == "scissors") {
+        else if (humanChoice.toLowerCase() == "scissor" && computerChoice.toLowerCase() == "scissor") {
             console.log("Tie Game No One Wins!");
 
         }
@@ -72,7 +72,7 @@ function playGame() {
             console.log("Congratulations! You Won!!");
             ++humanScore;
         }
-        else if (humanChoice.toLowerCase() == "paper" && computerChoice.toLowerCase() == "scissors") {
+        else if (humanChoice.toLowerCase() == "paper" && computerChoice.toLowerCase() == "scissor") {
             console.log("You Lose! Better Luck Next Time");
             ++computerScore;
         }
@@ -84,6 +84,15 @@ function playGame() {
         console.log(`computer choice = ${computerChoice}`);
         playRound(humanChoice, computerChoice);
         x++;
+    }
+    if (humanScore<computerScore){
+        console.log(`You win with a score of ${humanScore}`);
+    }
+    else if (humanScore=computerScore){
+        console.log("It is a tie")
+    }
+    else{
+        console.log(`You lose as the computer scored ${computerScore} and you scored ${humanScore}`);
     }
 
 }
