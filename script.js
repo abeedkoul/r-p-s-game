@@ -96,7 +96,8 @@ function playGame() {
     }
 
 }
-playGame();
+
+// playGame();
 // playRound(humanChoice,computerChoice);
 
 // getHumanChoice();
