@@ -34,8 +34,7 @@ function getHumanChoice() {
 
 
 
-console.log(`${typeof (humamChoice)}`);
-console.log(typeof (computerChoice));
+
 
 function playGame() {
     let x = 0;
@@ -88,7 +87,7 @@ function playGame() {
     if (humanScore>computerScore){
         console.log(`You win with a score of ${humanScore}`);
     }
-    else if (humanScore=computerScore){
+    else if (humanScore==computerScore){
         console.log("It is a tie")
     }
     else{
@@ -98,6 +97,3 @@ function playGame() {
 }
 
 playGame();
-// playRound(humanChoice,computerChoice);
-
-// getHumanChoice();
