@@ -25,7 +25,7 @@ function rockChoice(){
     let counter = 0;
     humanChoice = "rock";
     computerChoice = getComputerChoice();
-    let result = document.createElement("div")
+    let result = document.createElement("div"g)
     body.appendChild(result);
     console.log(counter);
     if(counter==4){
